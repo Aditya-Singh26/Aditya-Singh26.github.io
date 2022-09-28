@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/32f181d7c4.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Aditya Pratap Singh</title>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0px;
+      }
+      #navbar {
+        position: fixed;
+        background-color: white;
+        top: 0;
+        padding: 15px;
+        display: flex;
+        height: 30px;
+        font-weight: bold;
+        width: 100%;
+        justify-content: center;
+        gap: 60px;
+        font-size: larger;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      }
+      #navbar > div > a {
+        color: black;
+        text-decoration: none;
+      }
+      #navbar > div > a:hover {
+        color: rgb(64, 112, 244);
+        cursor: pointer;
+      }
+      #container1 {
+        padding-top: 180px;
+        width: 70%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+      }
+      #intro {
+        font-size: 45px;
+        font-weight: 800;
+      }
+      #intro > button {
+        margin-top: 60px;
+        padding: 15px 45px;
+        border-radius: 5px;
+        background-color: rgb(64, 112, 244);
+        font-weight: bold;
+        color: white;
+        font-size: large;
+        border: 1px solid rgb(64, 112, 244);
+      }
+      #intro > button:hover {
+        background-color: white;
+        color: rgb(64, 112, 244);
+        border: 1px solid rgb(64, 112, 244);
+        cursor: pointer;
+      }
+      #merge {
+        display: flex;
+        gap: 15px;
+      }
+      #color {
+        color: rgb(64, 112, 244);
+      }
+      #photo {
+        width: 390px;
+      }
+      #photo > img {
+        width: 100%;
+        border-radius: 50%;
+      }
+      #icons {
+        margin-top: 45px;
+        display: flex;
+        gap: 30px;
+      }
+      .icons:hover {
+        color: rgb(64, 112, 244);
+        cursor: pointer;
+      }
+      #container2 {
+        width: 50%;
+        margin: auto;
+        padding-top: 150px;
+        text-align: center;
+      }
+      #name2 {
+        font-size: 30px;
+        font-weight: bold;
+      }
+      h1 {
+        font-weight: 900;
+        text-align: center;
+      }
+      #para {
+        color: gray;
+      }
+      #container2 > div > p {
+        font-size: large;
+      }
+      #container3 {
+        width: 50%;
+        margin: auto;
+        padding-top: 150px;
+      }
+      #container3 > div > div > div {
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      }
+      #table > div {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+      }
+      #table > div > div {
+        padding: 15px;
+        font-size: medium;
+        font-weight: bold;
+      }
+      #mysql {
+        display: flex;
+        gap: 5px;
+      }
+      #mysql > img {
+        width: 30px;
+      }
+      #spring {
+        gap: 5px;
+        display: flex;
+      }
+      #spring > img {
+        width: 15px;
+        height: 15px;
+      }
+      #table {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+      }
+      #container4 {
+        padding-top: 150px;
+        width: 70%;
+        margin: auto;
+      }
+      /* #box {
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            gap: 45px;
+        }  */
+      #box > div {
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+      }
+      #box > div > img {
+        width: 100%;
+      }
+      #box > div > img:hover {
+        cursor: pointer;
+      }
+      #footer {
+        margin-top: 100px;
+        background-color: rgb(14, 36, 49);
+      }
+      #container5 {
+        color: white;
+        padding-top: 50px;
+        width: 40%;
+        margin: auto;
+        text-align: center;
+      }
+      #contact {
+        margin-top: 45px;
+        display: flex;
+        justify-content: space-around;
+      }
+      #contact > div:hover {
+        cursor: pointer;
+        color: rgb(64, 112, 244);
+      }
+      #contact > div > a {
+        color: white;
+        text-decoration: none;
+      }
+      #contact > div > a:hover {
+        cursor: pointer;
+        color: rgb(64, 112, 244);
+      }
+      #name {
+        margin-top: 45px;
+        font-size: 36px;
+        font-weight: bold;
+      }
+      .heading {
+        color: rgb(64, 112, 244);
+        text-decoration: underline;
+      }
+      .button {
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        background-color: rgb(64, 112, 244);
+        border: 1px solid rgb(64, 112, 244);
+      }
+      .button:hover {
+        background-color: white;
+        color: rgb(64, 112, 244);
+        border: 1px solid rgb(64, 112, 244);
+        cursor: pointer;
+      }
+      #last {
+        margin-top: 30px;
+        color: gray;
+        padding: 10px;
+      }
+      @media screen and (max-width: 600px) {
+        #container1 {
+          width: 90%;
+        }
+        #navbar {
+          gap: 15px;
+          padding: 10px;
+        }
+        #intro {
+          font-size: 24px;
+          font-weight: 800;
+        }
+        #intro > button {
+          margin-top: 60px;
+          padding: 10px 30px;
+        }
+        #container2 {
+          width: 90%;
+        }
+        #container3 {
+          width: 90%;
+        }
+        #table {
+          grid-template-columns: repeat(1, 1fr);
+          gap: 30px;
+        }
+        #container4 {
+          width: 90%;
+        }
+        #box {
+          grid-template-columns: repeat(1, 1fr);
+          gap: 45px;
+        }
+        #container5 {
+          width: 90%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a name="home"></a>
+    <div id="navbar">
+      <div><a href="#home">Home</a></div>
+      <div><a href="#about">About</a></div>
+      <div><a href="#skills">Skills</a></div>
+      <div><a href="#projects">Projects</a></div>
+      <div><a href="#contact">Contact</a></div>
+    </div>
+    <div id="container1">
+      <div id="intro">
+        <div>Hi,</div>
+        <div id="merge">
+          <div>I am</div>
+          <div id="color">Aditya</div>
+        </div>
+        <div>Java Backend Developer</div>
+        <button id="resume">Resume</button>
+        <div id="icons">
+          <i id="linkedin" class="fa-brands fa-linkedin-in icons"></i>
+          <i id="github" class="fa-brands fa-github icons"></i>
+        </div>
+      </div>
+      <div id="photo">
+        <img src="Photos\profile.jpg" />
+      </div>
+    </div>
+    <a name="about"></a>
+    <div id="container2">
+      <div>
+        <h1 class="heading">About</h1>
+        <h2 id="name2">I am Aditya Pratap Singh</h2>
+        <p id="para">
+          Dedicated backend developer, adept at contributing to the highly
+          collaborative work environment and finding solutions. Passionate and
+          hardworking with a penchant for developing customized interfaces that
+          factor in unique demands for accessibility, reachability, and
+          security.
+        </p>
+      </div>
+    </div>
+    <a name="skills"></a>
+    <div id="container3">
+      <h1 class="heading">Skills</h1>
+      <div id="table">
+        <div>
+          <h2>Skills and Frameworks</h2>
+          <div><i class="fa-brands fa-html5"></i> HTML5</div>
+          <div><i class="fa-brands fa-css3"></i> CSS3</div>
+          <div><i class="fa-brands fa-js"></i> JavaScript</div>
+          <div><i class="fa-brands fa-java"></i> Java</div>
+          <div id="mysql">
+            <img
+              src="https://d1.awsstatic.com/asset-repository/products/amazon-rds/1024px-MySQL.ff87215b43fd7292af172e2a5d9b844217262571.png"
+            />
+            MySQL
+          </div>
+          <div>RDBMS</div>
+        </div>
+        <div>
+          <h2>Soft Skills</h2>
+          <div>Communication</div>
+          <div>Teamwork</div>
+          <div>Time Management</div>
+          <div>Critical Thinking</div>
+          <div>Adaptability</div>
+          <div>Collaboration</div>
+        </div>
+      </div>
+    </div>
+    <a
+      target="_blank"
+      rel="noreferrer"
+      id="cicin"
+      href="https://github.com/Aditya-Singh26"
+    >
+      <p style="margin-left: 20px">My Github contributions</p>
+      <img
+        width="95%"
+        style="margin-bottom: 20px"
+        id="github-contributions"
+        src="https://ghchart.rshah.org/Aditya-Singh26"
+        href="https://github.com/Aditya-Singh26"
+        alt="Aditya-Singh26's Github chart"
+      />
+    </a>
+    <a name="projects"></a>
+    <div id="container4">
+      <h1 class="heading">Projects</h1>
+      <div id="box">
+        <div>
+          <img src="Photos/project1.png" />
+          <h3>Lumen5.COM CLONE</h3>
+          <p>
+            A collaborative project, built in 5 days by a team of 5 developers.
+          </p>
+          <p>HTML | CSS | JavaScript</p>
+          <button id="StyleCrazecode" class="button">
+            CODE <i class="fa-brands fa-github"></i>
+          </button>
+          <button id="StyleCrazelive" class="button">
+            LIVE <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+      <div id="container5">
+        <a name="contact"></a>
+        <h1 class="heading">Get in touch</h1>
+        <div id="name">Aditya Pratap Singh</div>
+        <div id="contact">
+          <div id="linkedin1">
+            <i class="fa-brands fa-linkedin-in"></i>
+            <div>Linkedin</div>
+          </div>
+          <!-- <div id="twitter">
+                    <i class="fa-brands fa-twitter"></i>
+                    <div>Twitter</div>
+                </div> -->
+          <!-- <div id="instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                    <div>Instagram</div>
+                </div> -->
+          <div>
+            <a href="mailto:adityapratap.singh43@gmail.com">
+              <div id="email">
+                <i class="fa-solid fa-envelope"></i>
+                <div>Email</div>
+              </div>
+            </a>
+          </div>
+          <div>
+            <a href="tel:+91 9451224272">
+              <div id="phone">
+                <i class="fa-solid fa-phone"></i>
+                <div>Phone</div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div id="last">Designed and build by Aditya Pratap Singh, 2022.</div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  let resume = document.getElementById("resume");
+  resume.onclick = function () {
+    window.open(
+      "https://drive.google.com/file/d/1-keWh0wYq6PFZuD3wFtKfxYsmcKs2AFo/view",
+      "_blank"
+    );
+  };
+  let linkedin = document.getElementById("linkedin");
+  linkedin.onclick = function () {
+    window.open("https://linkedin.com/in/singh-aditya26", "_blank");
+  };
+  let github = document.getElementById("github");
+  github.onclick = function () {
+    window.open("https://github.com/Aditya-Singh26", "_blank");
+  };
+  let StyleCrazelive = document.getElementById("StyleCrazelive");
+  StyleCrazelive.onclick = function () {
+    window.open("https://remarkable-chaja-5bb2dc.netlify.app/", "_blank");
+  };
+  let StyleCrazecode = document.getElementById("StyleCrazecode");
+  StyleCrazecode.onclick = function () {
+    window.open(
+      "https://github.com/visheshguria/Group-Project-Unit-2",
+      "_blank"
+    );
+  };
+
+  let linkedin1 = document.getElementById("linkedin1");
+  linkedin1.onclick = function () {
+    window.open("https://linkedin.com/in/singh-aditya26/", "_blank");
+  };
+</script>
