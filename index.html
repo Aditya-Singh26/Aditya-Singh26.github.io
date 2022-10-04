@@ -63,6 +63,9 @@
         border: 1px solid rgb(64, 112, 244);
         cursor: pointer;
       }
+      #resume > a {
+        text-decoration: none;
+      }
       #merge {
         display: flex;
         gap: 15px;
@@ -105,9 +108,10 @@
       }
       #container2 > div > p {
         font-size: large;
+        text-align: center;
       }
       #container3 {
-        width: 50%;
+        width: 70%;
         margin: auto;
         padding-top: 150px;
       }
@@ -117,7 +121,7 @@
       #table > div {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        gap: 20px;
+        gap: 30px;
       }
       #table > div > div {
         padding: 15px;
@@ -142,7 +146,7 @@
       #table {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
+        column-gap: 25%;
       }
       #container4 {
         padding-top: 150px;
@@ -173,14 +177,14 @@
       #container5 {
         color: white;
         padding-top: 50px;
-        width: 40%;
+        width: 80%;
         margin: auto;
         text-align: center;
       }
       #contact {
         margin-top: 45px;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
       }
       #contact > div:hover {
         cursor: pointer;
@@ -221,9 +225,18 @@
         color: gray;
         padding: 10px;
       }
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 990px){
+          #container3{
+            width: 80%;
+          }
+      }
+      @media screen and (max-width: 750px) {
         #container1 {
           width: 90%;
+          justify-content: space-evenly;
+        }
+        #photo{
+          width: 30%;
         }
         #navbar {
           gap: 15px;
@@ -257,208 +270,209 @@
         #container5 {
           width: 90%;
         }
+       
       }
 
       :root {
-	--color-calendar-graph-day-bg: #dddbdb;
-	--color-calendar-graph-day-L1-bg: #39dd34;
-	--color-calendar-graph-day-L2-bg: #45a045;
-	--color-calendar-graph-day-L3-bg: #047526;
-	--color-calendar-graph-day-L4-bg: #0a4208;
-  }
-  
-  rect.ContributionCalendar-day[data-level='0'] {
-	  fill: var(--color-calendar-graph-day-bg);
-  }
-  
-  rect.ContributionCalendar-day[data-level='1'] {
-	  fill: var(--color-calendar-graph-day-L1-bg);
-  }
-  
-  rect.ContributionCalendar-day[data-level='2'] {
-	  fill: var(--color-calendar-graph-day-L2-bg);
-  }
-  
-  rect.ContributionCalendar-day[data-level='3'] {
-	  fill: var(--color-calendar-graph-day-L3-bg);
-  }
-  
-  rect.ContributionCalendar-day[data-level='4'] {
-	  fill: var(--color-calendar-graph-day-L4-bg);
-  }
-  
-  .calendar .width-full > .float-left {
-	  display: none;
-  }
-  
-  .calendar {
-	  font-family: Helvetica, arial;
-	  /* border: 1px solid #DDDDDD; */
-	  border-radius: 10px;
-	  min-height: 243px;
-	  text-align: center;
-	  margin: 0 auto;
-	  
-  }
-  
-  .calendar-graph text.wday,
-  .calendar-graph text.month {
-	  font-size: 10px;
-	  fill: #aaa;
-  }
-  
-  .contrib-legend {
-	  text-align: right;
-	  padding: 0 14px 10px 0;
-	  display: inline-block;
-	  float: right;
-  }
-  
-  .contrib-legend .legend {
-	  display: inline-block;
-	  list-style: none;
-	  margin: 0 5px;
-	  position: relative;
-	  bottom: -1px;
-	  padding: 0;
-  }
-  
-  .contrib-legend .legend li {
-	  display: inline-block;
-	  width: 10px;
-	  height: 10px;
-  }
-  
-  .text-small {
-	  font-size: 12px;
-	  color: #767676;
-  }
-  
-  .calendar-graph {
-	  padding: 5px 0 0;
-	  text-align: center;
-  }
-  
-  .contrib-column {
-	  padding: 15px 0;
-	  text-align: center;
-	  /* border-left: 1px solid #ddd;
-	  border-top: 1px solid #ddd; */
-	  font-size: 11px;
-  }
-  
-  .contrib-column-first {
-	  border-left: 0;
-  }
-  
-  .table-column {
-	  display: table-cell;
-	  width: 1%;
-	  padding-right: 10px;
-	  padding-left: 10px;
-	  vertical-align: top;
-  }
-  
-  .contrib-number {
-	  font-weight: 300;
-	  line-height: 1.3em;
-	  font-size: 24px;
-	  display: block;
-	  color: rgb(31, 30, 30);
-  }
-  
-  .calendar img.spinner {
-	  width: 70px;
-	  margin-top: 50px;
-	  min-height: 70px;
-  }
-  
-  .monospace {
-	  text-align: center;
-	  color: #000;
-	  font-family: monospace;
-  }
-  
-  .monospace a {
-	  color: #1D75AB;
-	  text-decoration: none;
-  }
-  
-  .contrib-footer {
-	  font-size: 11px;
-	  padding: 0 10px 12px;
-	  text-align: left;
-	  width: 100%;
-	  box-sizing: border-box;
-	  height: 26px;
-  }
-  
-  .left.text-muted {
-	  float: left;
-	  margin-left: 9px;
-	  color: #767676;
-  }
-  .left.text-muted a {
-	  color: #4078c0;
-	  text-decoration: none;
-  }
-  .left.text-muted a:hover,
-  .monospace a:hover {
-	  text-decoration: underline;
-  }
-  
-  h2.f4.text-normal.mb-3 {
-	  display: none;
-  }
-  
-  .float-left.text-gray {
-	  float: left;
-  }
-  #user-activity-overview{
-	  display:none;
-  }
-  
-  .day-tooltip {
-	  white-space: nowrap;
-	  position: absolute;
-	  z-index: 99999;
-	  padding: 10px;
-	  font-size: 12px;
-	  color: #959da5;
-	  text-align: center;
-	  background: rgba(0,0,0,.85);
-	  border-radius: 3px;
-	  display: none;
-	  pointer-events: none;
-  }
-  .day-tooltip strong {
-	  color: #dfe2e5;
-  }
-  .day-tooltip.is-visible {
-	  display: block;
-  }
-  .day-tooltip:after {
-	  position: absolute;
-	  bottom: -10px;
-	  left: 50%;
-	  width: 5px;
-	  height: 5px;
-	  box-sizing: border-box;
-	  margin: 0 0 0 -5px;
-	  content: " ";
-	  border: 5px solid transparent;
-	  border-top-color: rgba(0,0,0,.85)
-  }
-  
-  text.ContributionCalendar-label {
-	  fill: #ccc;
-	  font-size: 11px;
-  }
+        --color-calendar-graph-day-bg: #dddbdb;
+        --color-calendar-graph-day-L1-bg: #39dd34;
+        --color-calendar-graph-day-L2-bg: #45a045;
+        --color-calendar-graph-day-L3-bg: #047526;
+        --color-calendar-graph-day-L4-bg: #0a4208;
+      }
 
-  .js-calendar-graph-svg{
-	margin-top: 20px;
-	width: 95%;
-  }
+      rect.ContributionCalendar-day[data-level="0"] {
+        fill: var(--color-calendar-graph-day-bg);
+      }
+
+      rect.ContributionCalendar-day[data-level="1"] {
+        fill: var(--color-calendar-graph-day-L1-bg);
+      }
+
+      rect.ContributionCalendar-day[data-level="2"] {
+        fill: var(--color-calendar-graph-day-L2-bg);
+      }
+
+      rect.ContributionCalendar-day[data-level="3"] {
+        fill: var(--color-calendar-graph-day-L3-bg);
+      }
+
+      rect.ContributionCalendar-day[data-level="4"] {
+        fill: var(--color-calendar-graph-day-L4-bg);
+      }
+
+      .calendar .width-full > .float-left {
+        display: none;
+      }
+
+      .calendar {
+        font-family: Helvetica, arial;
+        /* border: 1px solid #DDDDDD; */
+        border-radius: 10px;
+        width: 90%;
+        min-height: 243px;
+        text-align: center;
+        margin: 0 auto;
+      }
+
+      .calendar-graph text.wday,
+      .calendar-graph text.month {
+        font-size: 10px;
+        fill: #aaa;
+      }
+
+      .contrib-legend {
+        text-align: right;
+        padding: 0 14px 10px 0;
+        display: inline-block;
+        float: right;
+      }
+
+      .contrib-legend .legend {
+        display: inline-block;
+        list-style: none;
+        margin: 0 5px;
+        position: relative;
+        bottom: -1px;
+        padding: 0;
+      }
+
+      .contrib-legend .legend li {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+      }
+
+      .text-small {
+        font-size: 12px;
+        color: #767676;
+      }
+
+      .calendar-graph {
+        padding: 5px 0 0;
+        text-align: center;
+      }
+
+      .contrib-column {
+        padding: 15px 0;
+        text-align: center;
+        /* border-left: 1px solid #ddd;
+	  border-top: 1px solid #ddd; */
+        font-size: 11px;
+      }
+
+      .contrib-column-first {
+        border-left: 0;
+      }
+
+      .table-column {
+        display: table-cell;
+        width: 1%;
+        padding-right: 10px;
+        padding-left: 10px;
+        vertical-align: top;
+      }
+
+      .contrib-number {
+        font-weight: 300;
+        line-height: 1.3em;
+        font-size: 24px;
+        display: block;
+        color: rgb(31, 30, 30);
+      }
+
+      .calendar img.spinner {
+        width: 70px;
+        margin-top: 50px;
+        min-height: 70px;
+      }
+
+      .monospace {
+        text-align: center;
+        color: #000;
+        font-family: monospace;
+      }
+
+      .monospace a {
+        color: #1d75ab;
+        text-decoration: none;
+      }
+
+      .contrib-footer {
+        font-size: 11px;
+        padding: 0 10px 12px;
+        text-align: left;
+        width: 100%;
+        box-sizing: border-box;
+        height: 26px;
+      }
+
+      .left.text-muted {
+        float: left;
+        margin-left: 9px;
+        color: #767676;
+      }
+      .left.text-muted a {
+        color: #4078c0;
+        text-decoration: none;
+      }
+      .left.text-muted a:hover,
+      .monospace a:hover {
+        text-decoration: underline;
+      }
+
+      h2.f4.text-normal.mb-3 {
+        display: none;
+      }
+
+      .float-left.text-gray {
+        float: left;
+      }
+      #user-activity-overview {
+        display: none;
+      }
+
+      .day-tooltip {
+        white-space: nowrap;
+        position: absolute;
+        z-index: 99999;
+        padding: 10px;
+        font-size: 12px;
+        color: #959da5;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.85);
+        border-radius: 3px;
+        display: none;
+        pointer-events: none;
+      }
+      .day-tooltip strong {
+        color: #dfe2e5;
+      }
+      .day-tooltip.is-visible {
+        display: block;
+      }
+      .day-tooltip:after {
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        width: 5px;
+        height: 5px;
+        box-sizing: border-box;
+        margin: 0 0 0 -5px;
+        content: " ";
+        border: 5px solid transparent;
+        border-top-color: rgba(0, 0, 0, 0.85);
+      }
+
+      text.ContributionCalendar-label {
+        fill: #ccc;
+        font-size: 11px;
+      }
+
+      .js-calendar-graph-svg {
+        margin-top: 20px;
+        width: 95%;
+      }
     </style>
   </head>
   <body>
@@ -478,7 +492,11 @@
           <div id="color">Aditya</div>
         </div>
         <div>Java Backend Developer</div>
-        <button id="resume">Resume</button>
+        <button id="resume">
+          <a href=https://drive.google.com/u/0/uc?id=12a_lBqqnOr0DzGLiE6TOH66fVmLEbCQ_&export=download>
+            Resume
+          </a>
+        </button>
         <div id="icons">
           <i id="linkedin" class="fa-brands fa-linkedin-in icons"></i>
           <i id="github" class="fa-brands fa-github icons"></i>
@@ -507,7 +525,7 @@
       <h1 class="heading">Skills</h1>
       <div id="table">
         <div>
-          <h2>Skills and Frameworks</h2>
+          <h2>Technical Skills</h2>
           <div><i class="fa-brands fa-html5"></i> HTML5</div>
           <div><i class="fa-brands fa-css3"></i> CSS3</div>
           <div><i class="fa-brands fa-js"></i> JavaScript</div>
@@ -531,13 +549,10 @@
         </div>
       </div>
     </div>
-  <!-- ************************************************** -->
-  <h1 style="margin-top: 5pc">GitHub contribution calendar</h1>
-    <div class="calendar">
-	 
-      Loading the data...
-    </div>
-  <!-- ************************************************** -->
+    <!-- ************************************************** -->
+    <h1 style="margin-top: 5pc">GitHub contribution calendar</h1>
+    <div class="calendar">Loading the data...</div>
+    <!-- ************************************************** -->
     <a name="projects"></a>
     <div id="container4">
       <h1 class="heading">Projects</h1>
@@ -588,7 +603,7 @@
             <a href="tel:+91 9451224272">
               <div id="phone">
                 <i class="fa-solid fa-phone"></i>
-                <div>9451224272 </div>
+                <div>9451224272</div>
               </div>
             </a>
           </div>
@@ -599,13 +614,13 @@
   </body>
 </html>
 <script>
-  let resume = document.getElementById("resume");
-  resume.onclick = function () {
-    window.open(
-      "https://drive.google.com/file/d/12a_lBqqnOr0DzGLiE6TOH66fVmLEbCQ_/view?usp=sharing",
-      "_blank"
-    );
-  };
+  // let resume = document.getElementById("resume");
+  // resume.onclick = function () {
+  //   window.open(
+  //     "https://drive.google.com/file/d/12a_lBqqnOr0DzGLiE6TOH66fVmLEbCQ_/view?usp=sharing",
+  //     "_blank"
+  //   );
+  // };
   let linkedin = document.getElementById("linkedin");
   linkedin.onclick = function () {
     window.open("https://linkedin.com/in/singh-aditya26", "_blank");
@@ -631,10 +646,10 @@
     window.open("https://linkedin.com/in/singh-aditya26/", "_blank");
   };
 </script>
-<script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script> 
+<script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
 
 <script>
-    GitHubCalendar(".calendar", "Aditya-Singh26");
-    
-    GitHubCalendar(".calendar", "Aditya-Singh26", { responsive: true });
+  GitHubCalendar(".calendar", "Aditya-Singh26");
+
+  GitHubCalendar(".calendar", "Aditya-Singh26", { responsive: true });
 </script>
